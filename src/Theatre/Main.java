@@ -18,20 +18,20 @@ public class Main {
 
         TheatreCompanyMember[] firtThCoMembers = {
                 new Actor("Első", 10, 150, ActingTalent.EXCEPTIONALLYGIFTED, Roles.CHILD),
-                new Actor("Második", 20, 250, ActingTalent.VERYWEAK, Roles.YOUNG, Roles.UNISEX),
-                new Actor("Harmadik", 25, 300, ActingTalent.WEAK, Roles.ADULT_WOMAN, Roles.YOUNG),
+                new Actor("Második", 20, 250, ActingTalent.VERYWEAK, Roles.YOUNG),
+                new Actor("Harmadik", 25, 300, ActingTalent.WEAK, Roles.ADULT_WOMAN),
                 new Director("Első Rendező", 33, 5000, 100, 2),
                 new Props("ElsőKellékes", 23, 200, propNames),
-                new Actor("Negyedik", 30, 350, ActingTalent.TALENTED, Roles.ADULT_WOMAN, Roles.ADULT_MAN,  Roles.UNISEX),
-                new Actor("Ötödik", 35, 400, ActingTalent.AVERAGE, Roles.ADULT_MAN, Roles.OLD)
+                new Actor("Negyedik", 30, 350, ActingTalent.TALENTED, Roles.ADULT_MAN),
+                new Actor("Ötödik", 35, 400, ActingTalent.AVERAGE, Roles.OLD)
         };
 
         Role[] roleArray = {
-                new Role("Vadász", theFirstPlay, Roles.ADULT_MAN, Roles.ADULT_WOMAN),
-                new Role("Egerész", theFirstPlay, Roles.CHILD, Roles.YOUNG),
-                new Role("Prostituált", theFirstPlay, Roles.ADULT_WOMAN, Roles.ADULT_MAN, Roles.UNISEX),
-                new Role("Rabló", theFirstPlay, Roles.YOUNG, Roles.CHILD),
-                new Role("Rendőr", theFirstPlay, Roles.OLD, Roles.ADULT_MAN)
+                new Role("Vadász", theFirstPlay, Roles.ADULT_MAN),
+                new Role("Egerész", theFirstPlay, Roles.CHILD),
+                new Role("Prostituált", theFirstPlay, Roles.ADULT_WOMAN),
+                new Role("Rabló", theFirstPlay, Roles.YOUNG),
+                new Role("Rendőr", theFirstPlay, Roles.OLD)
         };
 
         theFirstPlay.setCharacters(roleArray);
@@ -44,7 +44,7 @@ public class Main {
         Performance firstPerformance = new Performance(theFirstPlay, firstCompany);
         firstPerformance.preparations();
 
-        //firstPerformance.playSimulation(); //NULLPOINTER HIBA
+        firstPerformance.playSimulation(); //NULLPOINTER HIBA
 
 
 

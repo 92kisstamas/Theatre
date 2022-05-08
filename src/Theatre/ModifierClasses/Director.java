@@ -28,25 +28,11 @@ public class Director extends TheatreCompanyMember{
             int y = 0;
 
             if (i >= actorTemp.length) {
-                i = 0;
+                i = -1;
                 continue;
             }
 
-            if (roleTemp[y].getRoles1() != null &&
-                       roleTemp[y].getRoles1().equals(actorTemp[i].getRoles1())
-                    || roleTemp[y].getRoles1().equals(actorTemp[i].getRoles2())
-                    || roleTemp[y].getRoles1().equals(actorTemp[i].getRoles3())
-
-                    || roleTemp[y].getRoles2() != null &&
-                       roleTemp[y].getRoles2().equals(actorTemp[i].getRoles1())
-                    || roleTemp[y].getRoles2().equals(actorTemp[i].getRoles2())
-                    || roleTemp[y].getRoles2().equals(actorTemp[i].getRoles3())
-
-                    || roleTemp[y].getRoles3() != null &&
-                       roleTemp[y].getRoles3().equals(actorTemp[i].getRoles1())
-                    || roleTemp[y].getRoles3().equals(actorTemp[i].getRoles2())
-                    || roleTemp[y].getRoles3().equals(actorTemp[i].getRoles3())
-            ) {
+            if (roleTemp[y].getRole().equals(actorTemp[i].getRole())) {
                 temp.add(new ActorRole(actorTemp[i], roleTemp[y]));
                 y++;
             }
